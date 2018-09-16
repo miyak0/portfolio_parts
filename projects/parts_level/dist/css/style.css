@@ -1,0 +1,137 @@
+.p-level {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.p-level .p-level__list {
+  margin-top: 20px;
+}
+
+.p-level .p-level__list .p-level__list__item {
+  width: 300px;
+  height: 26px;
+  margin-top: 15px;
+  background: #fff;
+  color: #707070;
+  font-size: 15px;
+  text-align: center;
+  position: relative;
+}
+
+.p-level .p-level__list .p-level__list__item:first-child {
+  border: 1px solid #E44C27;
+  margin-top: 0;
+}
+
+.p-level .p-level__list .p-level__list__item:first-child .p-level__list__item__bar {
+  opacity: 0;
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  -webkit-animation: levelbar 1.5s ease-in-out 0.5s 1 forwards;
+          animation: levelbar 1.5s ease-in-out 0.5s 1 forwards;
+  background: #F1652A;
+  max-width: 78%;
+}
+
+.p-level .p-level__list .p-level__list__item:nth-child(2) {
+  border: 1px solid #0270BA;
+}
+
+.p-level .p-level__list .p-level__list__item:nth-child(2) .p-level__list__item__bar {
+  opacity: 0;
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  -webkit-animation: levelbar 1.5s ease-in-out 0.5s 1 forwards;
+          animation: levelbar 1.5s ease-in-out 0.5s 1 forwards;
+  background: #28A9DF;
+  max-width: 70%;
+}
+
+.p-level .p-level__list .p-level__list__item:nth-child(3) {
+  border: 1px solid #E5A229;
+}
+
+.p-level .p-level__list .p-level__list__item:nth-child(3) .p-level__list__item__bar {
+  opacity: 0;
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  -webkit-animation: levelbar 1.5s ease-in-out 0.5s 1 forwards;
+          animation: levelbar 1.5s ease-in-out 0.5s 1 forwards;
+  background: #F1BF26;
+  max-width: 46%;
+}
+
+.p-level .p-level__list .p-level__list__item:nth-child(4) {
+  border: 1px solid #3BD1FC;
+}
+
+.p-level .p-level__list .p-level__list__item:nth-child(4) .p-level__list__item__bar {
+  opacity: 0;
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  -webkit-animation: levelbar 1.5s ease-in-out 0.5s 1 forwards;
+          animation: levelbar 1.5s ease-in-out 0.5s 1 forwards;
+  background: #17182C;
+  max-width: 53%;
+}
+
+.p-level .p-level__list .p-level__list__item .plevel__list__item__text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  color: #fff;
+  font-size: 13px;
+  line-height: 26px;
+}
+
+.p-level .p-level__list .p-level__list__item .plevel__list__item__text .u-color {
+  -webkit-animation: textcolor .5s ease 1.3s 1 forwards;
+          animation: textcolor .5s ease 1.3s 1 forwards;
+}
+
+@-webkit-keyframes levelbar {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes levelbar {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes textcolor {
+  0% {
+    color: #fff;
+  }
+  100% {
+    color: #707070;
+  }
+}
+
+@keyframes textcolor {
+  0% {
+    color: #fff;
+  }
+  100% {
+    color: #707070;
+  }
+}

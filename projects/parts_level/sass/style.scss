@@ -1,0 +1,101 @@
+$white : #fff;
+$textcolor: #707070;
+@mixin barcolor($levelcolor, $width) {
+        opacity: 0;
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        animation: levelbar 1.5s ease-in-out 0.5s 1 forwards;
+        background: $levelcolor;
+        max-width: $width;
+}
+.p-level {
+  width: 960px;
+  margin: 0 auto;
+  .p-level__list {
+    margin-top: 20px;
+    .p-level__list__item {
+      width: 300px;
+      height: 26px;
+      margin-top: 15px;
+      background: $white;
+      color: $textcolor;
+      font-size: 15px;
+      text-align: center;
+      position: relative;
+      &:first-child {
+        border: 1px solid #E44C27;
+        margin-top: 0;
+        .p-level__list__item__bar{
+          @include barcolor(#F1652A, 78%)
+      }
+    }
+      &:nth-child(2) {
+        border: 1px solid #0270BA;
+        .p-level__list__item__bar{
+          @include barcolor(#28A9DF, 70%)
+      }
+    }
+      &:nth-child(3){
+        border: 1px solid #E5A229;
+        .p-level__list__item__bar{
+          @include barcolor(#F1BF26, 46%)
+      }
+      }
+      &:nth-child(4) {
+        border: 1px solid #3BD1FC;
+        .p-level__list__item__bar{
+          @include barcolor(#17182C, 53%)
+      }      }
+      // .p-level__list__item__bar{
+      //   opacity: 0;
+      //   display: block;
+      //   height: 100%;
+      //   position: absolute;
+      //   top: 0;
+        // &:first-child {
+        //   background:#F1652A;
+        //   animation: levelbar 1.5s ease-in-out 0.5s 1 forwards;
+        //   max-width: 70%;
+        // }
+        // &:nth-of-type(2) {
+        //   background:#28A9DF;
+        //   animation: levelbar 1.5s ease-in-out 0.5s 1 forwards;
+        //   max-width: 60%;
+        // }
+        // &:nth-child(3){
+        //   background:#F1BF26;
+        //   animation: levelbar 1.5s ease-in-out 0.5s 1 forwards;
+        //   max-width: 40%;
+        // }
+        // &:nth-child(4) {
+        //   background: #17182C;
+        //   animation: levelbar 1.5s ease-in-out 0.5s 1 forwards;
+        //   max-width: 67%;
+        // }
+      // }
+      .plevel__list__item__text{
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        color: $white;
+        font-size: 13px;
+        line-height: 26px;
+        .u-color {
+          animation: textcolor .5s ease 1.3s 1 forwards;
+        }
+      }
+    }
+  }
+}
+// アニメーション 
+@keyframes levelbar {
+  0% { width: 0px; }
+  100%{ width: 100%;  opacity: 1;}
+}
+@keyframes textcolor {
+  0% { color: $white; }
+  100% {color: $textcolor;}
+}
