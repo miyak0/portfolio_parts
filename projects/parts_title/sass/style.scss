@@ -1,7 +1,139 @@
-h1 {
-  font-size: 12px;
+$bgcolor: #E9E9E1;
+$darkblue :#06326C;
+$skyblue: #509AE9;
+body {
+  background: $bgcolor;
+  width: 100vw;
+  height: 100vh;
 }
-h2 {
-  background-color: #000;
-  color: #fff;
+
+#wrap {
+  position: relative;
+  .u-box-area {
+    position: fixed;
+  .u-box {
+    width: 120px;
+    height: 120px;
+    background: rgba($darkblue, $alpha: .9);
+    position: absolute;
+    top: 550px;
+    left: 10px;
+    animation-name: spin;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+  }
+  .u-boxS {
+    width: 60px;
+    height: 60px;
+    background: rgba($skyblue, $alpha: .9);
+    position: absolute;
+    left: 90px;
+    top: 610px;
+    animation: spinS;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+  }
+  .u-box2 {
+    width: 120px;
+    height: 120px;
+    background: rgba($darkblue, $alpha: .9);
+    position: absolute;
+    top: 30px;
+    left: 1300px;
+    animation-name: spin;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+  }
+  .u-box2S {
+    width: 60px;
+    height: 60px;
+    background: rgba($skyblue, $alpha: .9);
+    position: absolute;
+    left: 1330px;
+    top: 105px;
+    animation: spinS;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+  }
+}
+  .u-paint {
+    width: 46px;
+    height: 96px;
+    background: $darkblue;
+    opacity: 0;
+    transform: rotate(45deg);
+    &:first-child {
+      animation: paint 0.5s ease-in-out 0.5s 1 forwards
+    }
+    &:nth-child(2) {
+      animation: paint 1.5s ease-in-out 0.5s 1 forwards
+    }
+    &:nth-child(3) {
+      background: $darkblue;
+      animation: paint 2s ease-in-out 0.5s 1 forwards
+    }
+    &:nth-child(4) {
+      animation: paint 2.5s ease-in-out 0.5s 1 forwards
+    }
+    &:nth-child(5) {
+      animation: paint 3s ease-in-out 0.5s 1 forwards
+    }
+    &:nth-child(6) {
+      animation: paint 3.5s ease-in-out 0.5s 1 forwards
+    }
+    &:nth-child(7) {
+      animation: paint 4s ease-in-out 0.5s 1 forwards
+    } 
+  }
+
+}
+
+#l-header {
+  width: 960px;
+  margin: 0 auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .p-header__paint{
+    position: relative;
+    display: flex;
+    .p-header__paint__ttl {
+      color: #fff;
+      font-size: 30px;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      margin: auto;
+      animation: paint 5s ease-in-out 0.5s 1 forwards
+
+    }
+  }
+}
+
+.p-about {
+  height: 100vh;
+}
+
+.p-work {
+  height: 100vh;
+}
+.p-lifework {
+  height: 100vh;
+}
+// @keyframe
+@keyframes spin {
+  0%{ transform:  none; }
+  50% { transform: rotate(270deg) scale(.8);}
+}
+@keyframes spinS {
+  0%{ transform: none; }
+  50%{ transform: rotate(-180deg) scale(.8);}
+}
+@keyframes paint {
+ 100% {
+    opacity: 1;
+  }
 }
